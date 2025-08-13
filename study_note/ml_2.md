@@ -28,7 +28,7 @@ graph TD;
 #### 1.possitive definite--Around $\theta':L(\theta)>L(\theta')$ -- Local minima
 #### 2.negative definite--Around $\theta':L(\theta)<L(\theta')$ -- Local maxima
 #### 3.some possitive ,some negative--Around $\theta':L(\theta)>L(\theta')$ or $\theta':L(\theta)<L(\theta')$ -- siddle point
->1. if it is a siddle point,you can use eigen value to solve it.![png1](..\images\ml_2_png1.png)
+>1. if it is a siddle point,you can use eigen value to solve it.![png1](../images/ml_2_png1.png)
 >2. because the dimension is very high, local minima almost never occur.
 # 2. Batch and Momentum
 ## 1. small batch vs large batch
@@ -36,7 +36,7 @@ graph TD;
 ### 2. smaller batch size has better performance.What's wrong with large batch size?-->Optimization Fails (larger batch size is easier to stay in local minima)
 ### 3. small batch is better on testing data
 ## 2. Momentum:movement of last step minus gradient at present
-> 1. ![png2](..\images\ml_2_png2.png)
+> 1. ![png2](../images/ml_2_png2.png)
 # Learning rate
 ## 1. different parameters needs different learning rate
 $\theta^{t+1}_i=\theta^t_i-\frac{\eta}{\sigma^t_i}g^t_i$
