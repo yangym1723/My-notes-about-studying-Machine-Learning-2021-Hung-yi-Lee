@@ -37,3 +37,33 @@ graph TD;
 ### 3. small batch is better on testing data
 ## 2. Momentum:movement of last step minus gradient at present
 > 1. ![png2](..\images\ml_2_png2.png)
+# Learning rate
+## 1. different parameters needs different learning rate
+$\theta^{t+1}_i=\theta^t_i-\frac{\eta}{\sigma^t_i}g^t_i$
+1. Root Mean Square(used in **Adagrad**):$\sigma^t_i=\sqrt[\frac{1}{2}]{\frac{\sum^{t}_{n=0}(g^n_i)^2}{t+1}}$
+2. RMSProp:$\sigma^t_i=\sqrt[\frac{1}{2}]{\alpha*(\sigma^{t-1}_i)^2+(1-\alpha)*(g^t_i)^2}$
+3. Adam:RMSProp+Momentum
+## 2. Learning Rate Scheduling
+1. Learning Rate Decay:As the training goes,we are closer to the destination,so we reduce the learning rate.
+>$\theta^{t+1}_i=\theta^t_i-\frac{\eta^t}{\sigma^t_i}g^t_i$
+2. Warm Up:Increase and then decrease
+# Classification
+## 1. Class as one-hot vector
+## 2. softmax:$y'_i=\frac{exp(y_i)}{\sum_{j}exp(y_{i})}$
+$$
+\begin{align}
+\mathbf{y'} &= softmax(\mathbf{y}) \tag{1} \\
+\mathbf{y} &=\mathbf{b'}+\mathbf{W'}*\sigma(\mathbf{b}+\mathbf{W}*\mathbf{x}) \tag{2} 
+\end{align}
+$$
+## 3. Loss of Classification:Cross-entropy
+$e=-\sum_{i}\hat{y}_i*lny'_{i}$
+> Minimizing cross-entropy is equivalent to maximizing likelihood
+# Feature Normalization
+For each dimension : i
+mean : $m_i$
+standard deviation : $\sigma_{i}$
+$\hat{x}^{r}_i=\frac{x^{r}_{i}-m_i}{\sigma_{i}}$
+then the means of all dims are 0,and the variances are all 1.
+> In general,feature normalization makes gradient descent converge faster
+> And every layer's output also needs Feature normalization
