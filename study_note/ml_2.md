@@ -21,7 +21,7 @@ graph TD;
 ### 1. more training data
 ### 2. data augmentation
 ### 3. constrained model(make yout model simpler)
-## 2. but theoverfitting and model bias's solutions is conflict,so we need trade-off
+## 2. but the overfitting and model bias's solutions is conflict,so we need trade-off
 ### 1. split your training data into training set and validation set for model selection(n-fold cross validation)
 ## 3. Local minima or siddle point?
 ### 1. Hessian matrix--$L(\theta)=L(\theta')+\frac{1}{2}(\theta-\theta')^TH(\theta-\theta')$
