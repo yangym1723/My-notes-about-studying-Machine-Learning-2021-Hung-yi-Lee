@@ -67,3 +67,25 @@ B --> C[Scalar];
    > D has to be smooth enough.
    > Without the constraint,the training of D will not converge.
    > Keeping the D smooth forces D(y) become $\infty$ and $-\infty$.
+3. GAN is still challenging
+   * if Discriminator cannot tell the difference,the Generator fail to improve.
+   * if Generator cannot fool the Discriminator,theDiscriminator fail to improve.
+## Evaluation of Generator
+So difficulty.
+## Conditional Generation
+```mermaid
+graph LR;
+A[x] --> B[Network:Generator];
+C[z:Simple Distribution] --> B;
+B --> D[y:Complex Distribution];
+```
+> None of the previous designs take **x** into account.
+
+![png2](../images/ml_5_png2.png)
+> pix2pix
+## Cycle GAN
+Learning from Unpaired Data
+* such as Image Style Transfer.
+* pseudo labeling and back traanslation both still need some paired data.
+* We can add a Generator.
+  ![png3](../images/ml_5_png3.png)
